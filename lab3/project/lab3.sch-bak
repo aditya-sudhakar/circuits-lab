@@ -1,0 +1,418 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L circuits:BJT_General Q?
+U 1 1 5E5722DE
+P 2345 2190
+F 0 "Q?" H 2445 2240 50  0001 C CNN
+F 1 "BJT_General" H 2645 2140 50  0001 C CNN
+F 2 "" H 2345 2190 50  0001 C CNN
+F 3 "" H 2345 2190 50  0001 C CNN
+	1    2345 2190
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source CH1
+U 1 1 5E572B0B
+P 1600 2660
+F 0 "CH1" H 1740 2706 50  0000 L CNN
+F 1 "Input" H 1740 2615 50  0000 L CNN
+F 2 "" H 1600 2660 50  0001 C CNN
+F 3 "" H 1600 2660 50  0001 C CNN
+	1    1600 2660
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2445 1600 2190
+Wire Wire Line
+	1600 2190 2045 2190
+$Comp
+L circuits:Source CH2
+U 1 1 5E57A189
+P 2345 2825
+F 0 "CH2" H 2485 2871 50  0000 L CNN
+F 1 "Measure" H 2485 2780 50  0000 L CNN
+F 2 "" H 2345 2825 50  0001 C CNN
+F 3 "" H 2345 2825 50  0001 C CNN
+	1    2345 2825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2345 2390 2345 2610
+$Comp
+L circuits:Source 5V
+U 1 1 5E57BE0D
+P 2945 2585
+F 0 "5V" H 3085 2631 50  0000 L CNN
+F 1 "Source" H 3085 2540 50  0000 L CNN
+F 2 "" H 2945 2585 50  0001 C CNN
+F 3 "" H 2945 2585 50  0001 C CNN
+	1    2945 2585
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2945 2370 2945 1895
+Wire Wire Line
+	2945 1895 2345 1895
+Wire Wire Line
+	2345 1895 2345 1990
+Wire Wire Line
+	1600 2875 1600 3255
+Wire Wire Line
+	1600 3255 2260 3255
+Wire Wire Line
+	2345 3255 2345 3250
+Wire Wire Line
+	2945 2800 2945 3250
+Wire Wire Line
+	2945 3250 2345 3250
+Connection ~ 2345 3250
+Wire Wire Line
+	2345 3250 2345 3040
+$Comp
+L power:GND #PWR?
+U 1 1 5E57D357
+P 2260 3305
+F 0 "#PWR?" H 2260 3055 50  0001 C CNN
+F 1 "GND" H 2265 3132 50  0000 C CNN
+F 2 "" H 2260 3305 50  0001 C CNN
+F 3 "" H 2260 3305 50  0001 C CNN
+	1    2260 3305
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2260 3305 2260 3255
+Connection ~ 2260 3255
+Wire Wire Line
+	2260 3255 2345 3255
+$Comp
+L circuits:BJT_General Q?
+U 1 1 5E57EB30
+P 5920 2195
+F 0 "Q?" H 6020 2245 50  0001 C CNN
+F 1 "BJT_General" H 6220 2145 50  0001 C CNN
+F 2 "" H 5920 2195 50  0001 C CNN
+F 3 "" H 5920 2195 50  0001 C CNN
+	1    5920 2195
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source CH1
+U 1 1 5E57EB36
+P 5175 2665
+F 0 "CH1" H 5315 2711 50  0000 L CNN
+F 1 "Input" H 5315 2620 50  0000 L CNN
+F 2 "" H 5175 2665 50  0001 C CNN
+F 3 "" H 5175 2665 50  0001 C CNN
+	1    5175 2665
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5175 2450 5175 2195
+Wire Wire Line
+	5175 2195 5620 2195
+$Comp
+L circuits:Source CH2
+U 1 1 5E57EB3E
+P 5920 3015
+F 0 "CH2" H 6060 3061 50  0000 L CNN
+F 1 "Measure" H 6060 2970 50  0000 L CNN
+F 2 "" H 5920 3015 50  0001 C CNN
+F 3 "" H 5920 3015 50  0001 C CNN
+	1    5920 3015
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source 5V
+U 1 1 5E57EB45
+P 6520 2590
+F 0 "5V" H 6660 2636 50  0000 L CNN
+F 1 "Source" H 6660 2545 50  0000 L CNN
+F 2 "" H 6520 2590 50  0001 C CNN
+F 3 "" H 6520 2590 50  0001 C CNN
+	1    6520 2590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6520 2375 6520 1900
+Wire Wire Line
+	6520 1900 5920 1900
+Wire Wire Line
+	5920 1900 5920 1995
+Wire Wire Line
+	5175 2880 5175 3260
+Wire Wire Line
+	5175 3260 5835 3260
+$Comp
+L power:GND #PWR?
+U 1 1 5E57EB55
+P 5835 3310
+F 0 "#PWR?" H 5835 3060 50  0001 C CNN
+F 1 "GND" H 5840 3137 50  0000 C CNN
+F 2 "" H 5835 3310 50  0001 C CNN
+F 3 "" H 5835 3310 50  0001 C CNN
+	1    5835 3310
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5835 3310 5835 3260
+Connection ~ 5835 3260
+Wire Wire Line
+	6520 2805 6520 3260
+$Comp
+L Device:R_US Rx
+U 1 1 5E58199F
+P 5920 2600
+F 0 "Rx" H 5975 2595 50  0000 L CNN
+F 1 " s" H 5988 2555 50  0001 L CNN
+F 2 "" V 5960 2590 50  0001 C CNN
+F 3 "~" H 5920 2600 50  0001 C CNN
+	1    5920 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5835 3260 5920 3260
+Wire Wire Line
+	5920 3230 5920 3260
+Connection ~ 5920 3260
+Wire Wire Line
+	5920 3260 6520 3260
+Wire Wire Line
+	5920 2750 5920 2800
+Wire Wire Line
+	5920 2395 5920 2450
+Text Notes 6425 1695 2    118  ~ 0
+Experiment 2
+Text Notes 2845 1740 2    118  ~ 0
+Experiment 1
+$Comp
+L circuits:BJT_General Q?
+U 1 1 5E595E3B
+P 9115 2175
+F 0 "Q?" H 9215 2225 50  0001 C CNN
+F 1 "BJT_General" H 9415 2125 50  0001 C CNN
+F 2 "" H 9115 2175 50  0001 C CNN
+F 3 "" H 9115 2175 50  0001 C CNN
+	1    9115 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source CH1
+U 1 1 5E595E41
+P 8370 2645
+F 0 "CH1" H 8510 2691 50  0000 L CNN
+F 1 "Input" H 8510 2600 50  0000 L CNN
+F 2 "" H 8370 2645 50  0001 C CNN
+F 3 "" H 8370 2645 50  0001 C CNN
+	1    8370 2645
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8370 2430 8370 2175
+Wire Wire Line
+	8370 2175 8815 2175
+$Comp
+L circuits:Source 5V
+U 1 1 5E595E4F
+P 9715 2570
+F 0 "5V" H 9855 2616 50  0000 L CNN
+F 1 "Source" H 9855 2525 50  0000 L CNN
+F 2 "" H 9715 2570 50  0001 C CNN
+F 3 "" H 9715 2570 50  0001 C CNN
+	1    9715 2570
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9715 2355 9715 1880
+Wire Wire Line
+	9715 1880 9115 1880
+Wire Wire Line
+	9115 1880 9115 1975
+Wire Wire Line
+	8370 2860 8370 3240
+Wire Wire Line
+	8370 3240 9030 3240
+$Comp
+L power:GND #PWR?
+U 1 1 5E595E5A
+P 9030 3290
+F 0 "#PWR?" H 9030 3040 50  0001 C CNN
+F 1 "GND" H 9035 3117 50  0000 C CNN
+F 2 "" H 9030 3290 50  0001 C CNN
+F 3 "" H 9030 3290 50  0001 C CNN
+	1    9030 3290
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9030 3290 9030 3240
+Connection ~ 9030 3240
+Wire Wire Line
+	9715 2785 9715 3240
+$Comp
+L Device:R_US Rx
+U 1 1 5E595E63
+P 9115 2580
+F 0 "Rx" H 9170 2575 50  0000 L CNN
+F 1 " s" H 9183 2535 50  0001 L CNN
+F 2 "" V 9155 2570 50  0001 C CNN
+F 3 "~" H 9115 2580 50  0001 C CNN
+	1    9115 2580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9030 3240 9115 3240
+Wire Wire Line
+	9115 3210 9115 3240
+Connection ~ 9115 3240
+Wire Wire Line
+	9115 3240 9715 3240
+Wire Wire Line
+	9115 2730 9115 2780
+Wire Wire Line
+	9115 2375 9115 2430
+Text Notes 9620 1675 2    118  ~ 0
+Experiment 3
+$Comp
+L circuits:I_source CH2
+U 1 1 5E599DAE
+P 9115 2995
+F 0 "CH2" H 9255 3041 50  0000 L CNN
+F 1 "Measure" H 9255 2950 50  0000 L CNN
+F 2 "" H 9115 2995 50  0001 C CNN
+F 3 "" H 9115 2995 50  0001 C CNN
+	1    9115 2995
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:BJT_General Q?
+U 1 1 5E5A6EF8
+P 2370 5595
+F 0 "Q?" H 2470 5645 50  0001 C CNN
+F 1 "BJT_General" H 2670 5545 50  0001 C CNN
+F 2 "" H 2370 5595 50  0001 C CNN
+F 3 "" H 2370 5595 50  0001 C CNN
+	1    2370 5595
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source CH1
+U 1 1 5E5A6EFE
+P 1625 5900
+F 0 "CH1" H 1765 5946 50  0000 L CNN
+F 1 "Input" H 1765 5855 50  0000 L CNN
+F 2 "" H 1625 5900 50  0001 C CNN
+F 3 "" H 1625 5900 50  0001 C CNN
+	1    1625 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:Source 5V
+U 1 1 5E5A6F06
+P 3285 5555
+F 0 "5V" H 3425 5601 50  0000 L CNN
+F 1 "Source" H 3425 5510 50  0000 L CNN
+F 2 "" H 3285 5555 50  0001 C CNN
+F 3 "" H 3285 5555 50  0001 C CNN
+	1    3285 5555
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3285 5340 3285 4935
+Wire Wire Line
+	1625 6225 2285 6225
+$Comp
+L power:GND #PWR?
+U 1 1 5E5A6F11
+P 2285 6275
+F 0 "#PWR?" H 2285 6025 50  0001 C CNN
+F 1 "GND" H 2290 6102 50  0000 C CNN
+F 2 "" H 2285 6275 50  0001 C CNN
+F 3 "" H 2285 6275 50  0001 C CNN
+	1    2285 6275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2285 6275 2285 6225
+Connection ~ 2285 6225
+Wire Wire Line
+	3285 5770 3285 6225
+$Comp
+L Device:R_US Rx
+U 1 1 5E5A6F1A
+P 2370 6000
+F 0 "Rx" H 2425 5995 50  0000 L CNN
+F 1 " s" H 2438 5955 50  0001 L CNN
+F 2 "" V 2410 5990 50  0001 C CNN
+F 3 "~" H 2370 6000 50  0001 C CNN
+	1    2370 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2285 6225 2370 6225
+Connection ~ 2370 6225
+Wire Wire Line
+	2370 5795 2370 5850
+Text Notes 3000 4745 2    118  ~ 0
+Experiment 4
+$Comp
+L circuits:I_source CH2
+U 1 1 5E5A6F27
+P 2780 6010
+F 0 "CH2" H 2920 6056 50  0000 L CNN
+F 1 "Measure" H 2920 5965 50  0000 L CNN
+F 2 "" H 2780 6010 50  0001 C CNN
+F 3 "" H 2780 6010 50  0001 C CNN
+	1    2780 6010
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US mRx
+U 1 1 5E5A85AE
+P 2370 5155
+F 0 "mRx" H 2435 5150 50  0000 L CNN
+F 1 " s" H 2438 5110 50  0001 L CNN
+F 2 "" V 2410 5145 50  0001 C CNN
+F 3 "~" H 2370 5155 50  0001 C CNN
+	1    2370 5155
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2370 6150 2370 6225
+Wire Wire Line
+	2370 6225 2780 6225
+Wire Wire Line
+	2370 5305 2370 5355
+Wire Wire Line
+	2370 4935 3285 4935
+Wire Wire Line
+	2370 4935 2370 5005
+Wire Wire Line
+	1625 5685 1625 5595
+Wire Wire Line
+	1625 5595 2070 5595
+Wire Wire Line
+	1625 6115 1625 6225
+Connection ~ 2780 6225
+Wire Wire Line
+	2780 6225 3285 6225
+Wire Wire Line
+	2780 5795 2780 5355
+Wire Wire Line
+	2780 5355 2370 5355
+Connection ~ 2370 5355
+Wire Wire Line
+	2370 5355 2370 5395
+$EndSCHEMATC
