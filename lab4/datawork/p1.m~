@@ -1,0 +1,40 @@
+clearvars
+close all
+
+load exp1data.mat
+
+figure(1)
+semilogy(Vb, IbQ1, 'r.', ...
+     Vb, -negIeQ1, 'b.',...
+     Vb, IbQ2, 'r.', ...
+     Vb, -negIeQ2, 'b.', ...
+     Vb, IbQ3, 'r.', ...
+     Vb, -negIeQ3, 'b.');
+title('V_b vs. I_b and I_e for Q1, along with a theoretical fit')
+xlabel('Voltage (V)')
+ylabel('Current (A)')
+legend('Data')
+
+figure(2)
+semilogy(Vb, IbQ2, 'r.', ...
+     Vb, -negIeQ2, 'b.');
+title('V_b vs. I_b and I_e for Q2, along with a theoretical fit')
+xlabel('Voltage (V)')
+ylabel('Current (A)')
+legend('Data')
+
+figure(3)
+semilogy(Vb, IbQ3, 'r.', ...
+     Vb, -negIeQ3, 'b.');
+title('V_b vs. I_b and I_e for Q3, along with a theoretical fit')
+xlabel('Voltage (V)')
+ylabel('Current (A)')
+legend('Data')
+
+figure(4)
+semilogy(Vb, IbQ4, 'r.', ...
+     Vb, -negIeQ4, 'b.');
+title('V_b vs. I_b and I_e for Q4 along with a theoretical fit')
+xlabel('Voltage (V)')
+ylabel('Current (A)')
+legend('Data')
