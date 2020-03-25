@@ -1,0 +1,1 @@
+raw_data = LTspice2Matlab("./ltspice/.raw")
