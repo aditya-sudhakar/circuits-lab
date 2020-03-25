@@ -1,1 +1,3 @@
 *.m~
+*.log
+*.DS_Store
