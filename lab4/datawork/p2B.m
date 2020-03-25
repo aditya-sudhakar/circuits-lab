@@ -9,14 +9,14 @@ IxB3000 = Vin./R3k;
 IxB30000 = Vin./R30k;
 
 % Make labels for data
-lbl3 = sprintf("Data: I_x = %.8f", IxB300);
-lbl3k = sprintf("Data: I_x = %.8f", IxB3000);
-lbl30k = sprintf("Data: I_x = %.8f", IxB30000);
+lbl3 = sprintf("Data: I_x = %.8f A", IxB300);
+lbl3k = sprintf("Data: I_x = %.8f A", IxB3000);
+lbl30k = sprintf("Data: I_x = %.8f A", IxB30000);
 
 % Make labels for fits
-flbl3 = sprintf("Fit: I_x = %.8f", IxB300);
-flbl3k = sprintf("Fit: I_x = %.8f", IxB3000);
-flbl30k = sprintf("Fit: I_x = %.8f", IxB30000);
+flbl3 = sprintf("Fit: I_x = %.8f A", IxB300);
+flbl3k = sprintf("Fit: I_x = %.8f A", IxB3000);
+flbl30k = sprintf("Fit: I_x = %.8f A", IxB30000);
 
 % Make theoretical data. Iy values negative due to setup.
 fIz300 = sqrt(IxB300.*-IyB300);
@@ -32,5 +32,6 @@ loglog(IyB300, -IzB300, 'r.', ...
        IyB30000, fIz30000, 'g')
 xlabel('I_y Current (A)')
 ylabel('I_z Current (A)')
+ylim([5*1e-6,1e-3])
 legend(lbl3, lbl3k, lbl30k, flbl3, flbl3k, flbl30k)
 title('I_z as a function of I_y for all I_x values')
