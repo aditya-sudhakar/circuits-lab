@@ -1,6 +1,6 @@
 close all
 clearvars
-
+addpath(genpath("../../GlobalFunctions/"));
 raw_data = LTspice2Matlab("./ltspice/lab5e1.raw");
 
 var = raw_data.variable_mat;
@@ -14,7 +14,9 @@ Vdd = var(6,:);
 [Is_p, V_T0_p, kp] = ekvfit(Vdd-Vin, Ip, 0.0001);
 
 % For plot purposes
+% figure()
 % [Is_n, V_T0_n, kn] = ekvfit(Vin, In, 0.0001, 'on');
+% figure()
 % [Is_p, V_T0_p, kp] = ekvfit(Vdd-Vin, Ip, 0.0001, 'on');
 
 % Calculate g_m = del(I_sat) / del(V_g)
@@ -36,7 +38,7 @@ fgns = kn*sqrt(Is_n*In(2:end))/U_T;
 fgpw = kp*Ip(2:end)./U_T;
 fgps = kp*sqrt(Is_p*Ip(2:end))/U_T;
 
-figure(1)
+figure()
 loglog(In(2:end), gn, 'r.', ...
        In(2:end), fgnw, 'r', In(2:end), fgns, 'y')
 xlabel('I for nMOS (A)')
@@ -46,7 +48,7 @@ ylim([1e-12, 3*1e-4])
 legend('From data', 'WI model', 'SI model')
 title('g_m vs. I for an nMOS transistor')
 
-figure(2)
+figure()
 loglog(Ip(2:end), -gp, 'b.', ...
        Ip(2:end), fgpw, 'b', Ip(2:end), fgps, 'c')
 xlabel('I for pMOS (A)')
