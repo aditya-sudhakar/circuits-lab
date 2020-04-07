@@ -32,34 +32,34 @@ Vg = load("./lab6/exp1/Vg.txt");
 % k4
 
 % PART 2-------------------------------------------------- %
-
-figure()
-semilogy(Vg, Isat1, 'r',...
-         Vg, Isat2, 'g',...
-         Vg, Isat3, 'b',...
-         Vg, Isat4, 'c');
-title("ALD1106 Current-Voltage Characteristics", "Interpreter", "Latex");
-xlabel("Gate Voltage (V)", "Interpreter", "Latex");
-ylabel("Channel Current(A)", "Interpreter", "Latex");
-legend("Q1", "Q2", "Q3","Q4","Interpreter", "Latex");
+% 
+% figure()
+% semilogy(Vg, Isat1, 'r',...
+%          Vg, Isat2, 'g',...
+%          Vg, Isat3, 'b',...
+%          Vg, Isat4, 'c');
+% title("ALD1106 Current-Voltage Characteristics", "Interpreter", "Latex");
+% xlabel("Gate Voltage (V)", "Interpreter", "Latex");
+% ylabel("Channel Current(A)", "Interpreter", "Latex");
+% legend("Q1", "Q2", "Q3","Q4","Interpreter", "Latex");
 
 % PART 3-------------------------------------------------- %
 
-% Isatavg = (Isat1 + Isat2 + Isat3 + Isat4)./4;
-% 
-% pd1 = 100.*(Isat1-Isatavg)./Isatavg;
-% pd2 = 100.*(Isat2-Isatavg)./Isatavg;
-% pd3 = 100.*(Isat3-Isatavg)./Isatavg;
-% pd4 = 100.*(Isat4-Isatavg)./Isatavg;
-% 
-% figure()
-% semilogx(Isatavg, pd1, 'r.',...
-%          Isatavg, pd2, 'g.',...
-%          Isatavg, pd3, 'b.',...
-%          Isatavg, pd4, 'c.');
-% title("Percent Difference from Average Channel Current", "Interpreter", "Latex");
-% xlabel("Average Channel Current (A)", "Interpreter", "Latex");
-% ylabel("Percent Difference (\%)", "Interpreter", "Latex");
-% legend("Q1", "Q2", "Q3","Q4","Interpreter", "Latex");
+Isatavg = (Isat1 + Isat2 + Isat3 + Isat4)./4;
+
+pd1 = 100.*(Isat1-Isatavg)./Isatavg;
+pd2 = 100.*(Isat2-Isatavg)./Isatavg;
+pd3 = 100.*(Isat3-Isatavg)./Isatavg;
+pd4 = 100.*(Isat4-Isatavg)./Isatavg;
+
+figure()
+semilogx(Isatavg, pd1, 'r.',...
+         Isatavg, pd2, 'g.',...
+         Isatavg, pd3, 'b.',...
+         Isatavg, pd4, 'c.');
+title("Percent Difference from Average Channel Current", "Interpreter", "Latex");
+xlabel("Average Channel Current (A)", "Interpreter", "Latex");
+ylabel("Percent Difference (\%)", "Interpreter", "Latex");
+legend("Q1", "Q2", "Q3","Q4","Interpreter", "Latex");
 
 
