@@ -33,7 +33,7 @@ xlabel("Gate Voltage (V)", "Interpreter", "Latex");
 ylabel("Channel Current(A)", "Interpreter", "Latex");
 legend("Single nMOS", "Parallel Connection", "Series Connection", "Interpreter", "Latex");
 xlim([0 5.5])
-ylim([1e-11 1e-2])
+ylim([1e-10 1e-2])
 
 figure()
 plot (Vg, Iohmicpar./Iohmic,...
