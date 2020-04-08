@@ -1,0 +1,22 @@
+* Z:\home\manu\Desktop\Classes\S2020\circuits-lab\lab7\datawork\ltspice\nexp.asc
+XM1 P001 V1 V nmos3
+Vdd P002 P003 5
+XU3 P003 gnd
+XU5 P002 vdd
+V§I1 P004 P001 0
+XM2 P005 V2 V nmos3
+V§I2 P006 P005 0
+XU4 P004 vdd
+XU16 P006 vdd
+XU6 P007 gnd
+XMb V Vb P007 nmos3
+Vb Vb P008 0.7
+XU8 P008 gnd
+V2 V2 P009 5
+XU10 P009 gnd
+V1 V1 P010 5
+XU12 P010 gnd
+.dc V1 0 5 0.01 V2 list 4 4.3 4.5 Vb list .6 5
+.include engr2420.sub
+.backanno
+.end
