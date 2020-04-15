@@ -44,24 +44,24 @@ legend('$I_1$, $V_2$ at $4V$', '$I_2$, $V_2$ at $4V$', '$I_1-I_2$, $V_2$ at $4V$
     '$I_1$, $V_2$ at $4.3V$', '$I_2$, $V_2$ at $4.3V$', '$I_1-I_2$, $V_2$ at $4.3V$', '$I_1+I_2$, $V_2$ at $4.3V$', ...
     '$I_1$, $V_2$ at $4.5V$', '$I_2$, $V_2$ at $4.5V$', '$I_1-I_2$, $V_2$ at $4.5V$', '$I_1+I_2$, $V_2$ at $4.5V$', 'Interpreter', 'Latex');
 
-% figure()
-% plot(V1-V2_4, V_4_w, 'r.', ... 
-%     V1-V2_43, V_43_w, 'g.', ... 
-%     V1-V2_45, V_45_w, 'b.');
-% xlim([-.5 .5]);
-% title("Common-source node Voltage as a function of $V_{dm}$", 'Interpreter', 'Latex');
-% xlabel("$V_{dm}$ (V)", 'Interpreter', 'Latex');
-% ylabel("Common-source Voltage (V)", 'Interpreter', 'Latex');
-% legend('At $4V$', 'At $4.3V$', 'At $4.5V$', 'Interpreter', 'Latex');
+figure()
+plot(V1-V2_4, V_4_w, 'r.', ... 
+    V1-V2_43, V_43_w, 'g.', ... 
+    V1-V2_45, V_45_w, 'b.');
+xlim([-.5 .5]);
+title("Common-source node Voltage as a function of $V_{dm}$", 'Interpreter', 'Latex');
+xlabel("$V_{dm}$ (V)", 'Interpreter', 'Latex');
+ylabel("Common-source Voltage (V)", 'Interpreter', 'Latex');
+legend('At $4V$', 'At $4.3V$', 'At $4.5V$', 'Interpreter', 'Latex');
 
-gdm_4ff_w = polyfit( V1(399:403)-V2_4(399:403), I1_4_w(399:403) - I2_4_w(399:403),1);
-gdm_4_w = gdm_4ff_w(1)
-
-gdm_43ff_w = polyfit( V1(429:433)-V2_43(429:433), I1_43_w(429:433) - I2_43_w(429:433),1);
-gdm_43_w = gdm_43ff_w(1)
-
-gdm_45ff_w = polyfit( V1(449:453)-V2_45(449:453), I1_45_w(449:453) - I2_45_w(449:453),1);
-gdm_45_w = gdm_45ff_w(1)
+% gdm_4ff_w = polyfit( V1(399:403)-V2_4(399:403), I1_4_w(399:403) - I2_4_w(399:403),1);
+% gdm_4_w = gdm_4ff_w(1)
+% 
+% gdm_43ff_w = polyfit( V1(429:433)-V2_43(429:433), I1_43_w(429:433) - I2_43_w(429:433),1);
+% gdm_43_w = gdm_43ff_w(1)
+% 
+% gdm_45ff_w = polyfit( V1(449:453)-V2_45(449:453), I1_45_w(449:453) - I2_45_w(449:453),1);
+% gdm_45_w = gdm_45ff_w(1)
 
 
 I1_4_s = var(20,:,4);
@@ -107,12 +107,12 @@ title("Common-source node Voltage as a function of $V_{dm}$", 'Interpreter', 'La
 xlabel("$V_{dm}$ (V)", 'Interpreter', 'Latex');
 ylabel("Common-source Voltage (V)", 'Interpreter', 'Latex');
 legend('At $4V$', 'At $4.3V$', 'At $4.5V$', 'Interpreter', 'Latex');
-
-gdm_4ff_s = polyfit( V1(381:421)-V2_4(381:421), I1_4_s(381:421) - I2_4_s(381:421),1);
-gdm_4_s = gdm_4ff_s(1)
-
-gdm_43ff_s = polyfit( V1(411:451)-V2_43(411:451), I1_43_s(411:451) - I2_43_s(411:451),1);
-gdm_43_s = gdm_43ff_s(1)
-
-gdm_45ff_s = polyfit( V1(431:471)-V2_45(431:471), I1_45_s(431:471) - I2_45_s(431:471),1);
-gdm_45_s = gdm_45ff_s(1)
+% 
+% gdm_4ff_s = polyfit( V1(381:421)-V2_4(381:421), I1_4_s(381:421) - I2_4_s(381:421),1);
+% gdm_4_s = gdm_4ff_s(1)
+% 
+% gdm_43ff_s = polyfit( V1(411:451)-V2_43(411:451), I1_43_s(411:451) - I2_43_s(411:451),1);
+% gdm_43_s = gdm_43ff_s(1)
+% 
+% gdm_45ff_s = polyfit( V1(431:471)-V2_45(431:471), I1_45_s(431:471) - I2_45_s(431:471),1);
+% gdm_45_s = gdm_45ff_s(1)
