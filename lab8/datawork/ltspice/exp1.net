@@ -1,0 +1,26 @@
+* C:\users\manu\Desktop\Classes\S2020\circuits-lab\lab8\datawork\ltspice\exp1.asc
+XM1 P001 V1 V nmos3
+XM2 P002 V2 V nmos3
+XMb P003 Vb P004 nmos3
+XM4 N002 N001 P005 pmos3
+XM3 N001 N001 P006 pmos3
+XU6 P006 vdd
+XU7 P005 vdd
+XU8 P007 vdd
+XU9 P008 gnd
+XU10 P004 gnd
+Vdd P007 P008 5
+V§I1 N001 P001 0
+V§I2 N002 P002 0
+V§Ib V P003 0
+XU12 P009 gnd
+V2 V2 P009 4
+XU14 P010 gnd
+Vb Vb P010 0.7
+XU16 P011 gnd
+V1 V1 P011 0
+V§Iout N002 Vout 0
+.include engr2420.sub
+.dc V1 0 5 .01 V2 list 2.5 3.5 4.5 Vb list .7 1.5  ;
+.backanno
+.end
