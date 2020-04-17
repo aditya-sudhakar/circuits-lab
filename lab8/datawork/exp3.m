@@ -2,6 +2,7 @@ close all
 clearvars
 addpath(genpath("../../GlobalFunctions/"));
 raw_data = LTspice2Matlab("./ltspice/exp3.raw");
+<<<<<<< HEAD
 vnml=raw_data.variable_name_list;
 var = raw_data.variable_mat;
 
@@ -83,3 +84,30 @@ title("Comparison of $V_{in}$ vs. $V_{out}-V_{in}$ for the unity-gain follower",
 % 
 % gdm_45ff_w = polyfit( V1(449:453)-V2_45(449:453), I1_45_w(449:453) - I2_45_w(449:453),1);
 % gdm_45_w = gdm_45ff_w(1)
+=======
+raw_data.variable_name_list
+var = raw_data.variable_mat;
+
+
+Vin = var(2,:);
+Vout = var(5,:);
+
+VTCff = polyfit(Vin(50:450),Vout(50:450),1);
+VTCfit = polyval(VTCff, Vin);
+
+figure()
+plot(Vin, Vout, 'r.', ...
+    Vin, VTCfit, 'r');
+VTCtitle = sprintf('Voltage Transfer Characteristic with Intrinsic Gain of = $%.8f UNITLESS$???', VTCff(1));
+title(VTCtitle ,'Interpreter', 'Latex');
+xlabel('$V_{in}$','Interpreter', 'Latex');
+ylabel('$V_{out}$','Interpreter', 'Latex');
+legend('VTC Data', 'VTC Fit','Interpreter', 'Latex');
+
+figure()
+plot(Vin, Vout - Vin, 'b.');
+title('Offset Voltage','Interpreter', 'Latex');
+xlabel('$V_{in}$','Interpreter', 'Latex');
+ylabel('$V_{out} - V_{in}$','Interpreter', 'Latex');
+legend('Offset Voltage','Interpreter', 'Latex');
+>>>>>>> cb490cbe285d5aef91d8b0fe68eb40e71115ef00
