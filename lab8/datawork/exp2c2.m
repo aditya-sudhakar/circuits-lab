@@ -20,7 +20,5 @@ VTCtitle = sprintf('$I_{out}$ vs. $V_{dm}$ with $G_m$ of = $%.8f$ $\\frac{1}{\\O
 title(VTCtitle ,'Interpreter', 'Latex');
 xlabel('$V_{dm}$','Interpreter', 'Latex');
 ylabel('$I_{out}$','Interpreter', 'Latex');
-fitwText = sprintf('Fit for WI, $R_{out}$ = $%.3f$ $M\\Omega$', (-1/WIff(1))/1000000);
-fitsText = sprintf('Fit for SI, $R_{out}$ = $%.3f$ $M\\Omega$', (-1/SIff(1))/1000000);
 legend('Data', 'Fit','Interpreter', 'Latex');
 
