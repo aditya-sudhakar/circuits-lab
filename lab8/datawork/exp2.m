@@ -35,7 +35,9 @@ ylim([1.5 5]);
 title("$V_{out}$ vs $V_{dm}$ with $M_b$ in WI($V_b = 0.7V$) and SI($V_b = 1.5V$)", 'Interpreter', 'Latex');
 xlabel("$V_{dm}$ (V)", 'Interpreter', 'Latex');
 ylabel("$V_{out}$ (V)", 'Interpreter', 'Latex');
-legend('$M_b$ in WI','$M_b$ in SI','Fit for WI','Fit for SI', 'Interpreter', 'Latex');
+fitwText = sprintf('Fit for WI, $A_{dm}$ = $%.3f$ ', WIff(1));
+fitsText = sprintf('Fit for SI, $A_{dm}$ = $%.3f$ ', SIff(1));
+legend('$M_b$ in WI','$M_b$ in SI',fitwText ,fitsText , 'Interpreter', 'Latex');
 
 WIff
 SIff
