@@ -1,5 +1,9 @@
 close all
 clearvars
+% addpath(genpath("../../GlobalFunctions/"));
+% raw_data = LTspice2Matlab("./ltspice/exp3small.raw");
+% vnml=raw_data.variable_name_list;
+% var = raw_data.variable_mat;
 load exp3small.txt
 load exp3large.txt
 
@@ -37,7 +41,7 @@ Vouts1 = Vouts(3:23);
 ts1 = ts(3:23)-ts(3);
 Vouts1 = Vouts1 - Vouts1(end);
 VbC1 = Vouts1./Vouts1(1);
-VbC1 = VbC1(1:end-1);
+VbC1 = log(VbC1(1:end-1));
 ts1 = ts1(1:end-1);
 ff1=polyfit(ts1, VbC1, 1);
 ftau1 = -1./ff1(1);
@@ -48,7 +52,7 @@ Vouts2 = Vouts(25:43);
 ts2 = ts(25:43)-ts(25);
 Vouts2 = Vouts2 - Vouts2(end);
 VbC2 = Vouts2./Vouts2(1);
-VbC2 = VbC2(1:end-1);
+VbC2 = log(VbC2(1:end-1));
 ts2 = ts2(1:end-1);
 ff2=polyfit(ts2, VbC2, 1);
 ftau2 = -1./ff2(1);
