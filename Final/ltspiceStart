@@ -1,0 +1,6 @@
+#!/bin/bash
+shopt -s expand_aliases
+source ~/.bashrc > /dev/null 2>&1
+#Replace ltspice with your ltspice command
+ltspice > /dev/null 2>&1
+#wine ~/Desktop/Classes/S2020/Circuits/ltspice/XVIIx64.exe

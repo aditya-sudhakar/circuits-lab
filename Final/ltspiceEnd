@@ -1,0 +1,5 @@
+#!/bin/bash
+#kill $1
+
+#Very bad lazy solution - Figure out how to use wine PIDs in the future
+wineserver -k
