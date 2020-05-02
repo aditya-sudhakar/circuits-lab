@@ -1,6 +1,0 @@
-* C:\users\manu\Desktop\Classes\S2020\circuits-lab\Final\ltspice\unit.asc
-XU1 RightRail VGate LeftRail nmos3 M=2
-XU2 Vpos VGate RightRail nmos3
-.include engr2420.sub
-.backanno
-.end
