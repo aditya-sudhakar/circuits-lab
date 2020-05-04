@@ -1,0 +1,58 @@
+* C:\users\manu\Desktop\Classes\S2020\circuits-lab\Final\ltspice\finalCmos.asc
+XMend N001 vg N007 nmos3
+XU1 N002 vdd
+XU2 ~I gnd
+XU3 I gnd
+V§I N007 I 0
+V§~I N011 ~I 0
+V§Iin N002 N003 0
+V§I1 N004 N005 0
+V§~I1 N008 N009 0
+XX1 vg N003 P001 N004 N008 P002 unitcmos
+XX2 vg P003 P004 N005 N009 P005 unitcmos
+XU4 P002 vdd
+vg vg P006 5
+Vdd P007 P008 5
+XU7 P007 vdd
+XU8 P006 gnd
+XU9 P008 gnd
+V§I1R P001 P003 0
+V§I2 N005 N006 0
+V§~I2 N009 N010 0
+XX3 vg P009 P010 N006 N010 P011 unitcmos
+XU5 P011 vdd
+V§I2R P004 P009 0
+XU10 P005 gnd
+V§I3 N006 N007 0
+V§~I3 N010 N011 0
+V§I3R P010 N001 0
+
+* block symbol definitions
+.subckt unitcmos Vgate RailIn RailOut Iout ~Iout Signal
+XU1 RailIn Vgate RailOut nmos3
+XU2 RailIn Vgate N001 nmos3
+XU3 N001 Vus N003 nmos3
+XU4 N001 Vls N004 nmos3
+XU5 Vgate N002 Vus nmos3
+XU6 Vgate Vinv Vls nmos3
+XX1 Signal Vinv P001 P002 inverter
+XX2 Vinv N002 P003 P004 inverter
+V§I1 N003 Iout 0
+V§~I1 N004 ~Iout 0
+XU7 P003 vdd
+XU9 P001 vdd
+XU8 P002 gnd
+XU10 P004 gnd
+.include engr2420.sub
+.ends unitcmos
+
+.subckt inverter In Out Vp Vn
+XU1 Out In Vp pmos3 M=3.5
+XU2 Out In Vn nmos3
+.include engr2420.sub
+.ends inverter
+
+.dc vg 0 5 .01
+.include engr2420.sub
+.backanno
+.end
